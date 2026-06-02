@@ -1,8 +1,8 @@
-##TRCY
-###This repository contains a modified version of Grafana, adapted for use within the MyCompany SaaS platform.
+## TRCY
+### This repository contains a modified version of Grafana, adapted for use within the MyCompany SaaS platform.
 
-###Legal & Licensing Notice * Original Software: Grafana (https://github.com/grafana/grafana) * Original Author: Grafana Labs (https://grafana.com) * License: GNU Affero General Public License v3.0 (AGPLv3)
-###Modifications Made: Pursuant to Section 5(a) of the AGPLv3, notice is hereby given that this software has been modified by DevWorx:
+### Legal & Licensing Notice * Original Software: Grafana (https://github.com/grafana/grafana) * Original Author: Grafana Labs (https://grafana.com) * License: GNU Affero General Public License v3.0 (AGPLv3)
+### Modifications Made: Pursuant to Section 5(a) of the AGPLv3, notice is hereby given that this software has been modified by DevWorx:
 Customized TypeScript and frontend components to adapt the user interface for our platform layout.
 Removed default branding elements and external news feed integrations. ---  How to Build and Run with Docker To run this modified version of Grafana, you need to build the Docker image using the Dockerfile located in the root directory.
 1. Build the Custom Image Run the following command in the root folder to compile the source code and package it into a container:
