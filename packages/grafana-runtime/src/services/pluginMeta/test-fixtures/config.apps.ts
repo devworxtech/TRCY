@@ -1,3 +1,4 @@
+
 import { type AngularMeta, type AppPluginConfig, PluginLoadingStrategy } from '@grafana/data';
 
 import { type AppPluginMetas } from '../types';
@@ -296,5 +297,5 @@ export const apps: AppPluginMetas = structuredClone({
       },
     },
     buildMode: 'production',
-  },
+  }
 });

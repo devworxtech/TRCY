@@ -1,3 +1,6 @@
+//Changes performed by DevWorx on 3/6/2026:
+//Renamed DataSourceSection to "TRCY-managed"
+
 import { groupBy, isEmpty } from 'lodash';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
@@ -125,7 +128,7 @@ function PaginatedGroupsLoader({ groupFilter, namespaceFilter, onLoadingStateCha
 
   return (
     <DataSourceSection
-      name="Grafana-managed"
+      name="TRCY-managed"
       application="grafana"
       uid={GrafanaRulesSourceSymbol}
       isLoading={isLoading}

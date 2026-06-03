@@ -1,3 +1,5 @@
+
+
 import type * as React from 'react';
 
 import { type Field, type LinkModel, type LinkTarget } from '@grafana/data';
@@ -8,8 +10,8 @@ export enum SpanLinkType {
   Logs = 'log',
   Traces = 'trace',
   Metrics = 'metric',
-  Profiles = 'profile',
-  ProfilesDrilldown = 'profile-drilldown',
+  // Profiles = 'profile',
+  // ProfilesDrilldown = 'profile-drilldown',
   Session = 'session',
   Unknown = 'unknown',
 }

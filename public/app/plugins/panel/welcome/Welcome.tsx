@@ -1,3 +1,6 @@
+//Changes performed by DevWorx on 2/6/2026:
+//Removed links
+
 import { css } from '@emotion/css';
 
 import { type GrafanaTheme2 } from '@grafana/data';
@@ -17,25 +20,25 @@ export const WelcomeBanner = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        <Trans i18nKey="welcome.welcome-banner.welcome-to-grafana">Welcome to Grafana</Trans>
+        <Trans i18nKey="welcome.welcome-banner.welcome-to-grafana">Welcome to TRCY</Trans>
       </h1>
-      <div className={styles.help}>
-        <h2 className={styles.helpText}>
-          <Trans i18nKey="welcome.welcome-banner.need-help">Need help?</Trans>
-        </h2>
-        <div className={styles.helpLinks}>
-          {helpOptions.map((option, index) => (
-            <TextLink
-              key={`${option.label}-${index}`}
-              href={`${option.href}?utm_source=grafana_gettingstarted`}
-              external
-              inline={false}
-            >
-              {option.label}
-            </TextLink>
-          ))}
-        </div>
-      </div>
+      {/*<div className={styles.help}>*/}
+      {/*  <h2 className={styles.helpText}>*/}
+      {/*    <Trans i18nKey="welcome.welcome-banner.need-help">Need help?</Trans>*/}
+      {/*  </h2>*/}
+      {/*  <div className={styles.helpLinks}>*/}
+      {/*    {helpOptions.map((option, index) => (*/}
+      {/*      <TextLink*/}
+      {/*        key={`${option.label}-${index}`}*/}
+      {/*        href={`${option.href}?utm_source=grafana_gettingstarted`}*/}
+      {/*        external*/}
+      {/*        inline={false}*/}
+      {/*      >*/}
+      {/*        {option.label}*/}
+      {/*      </TextLink>*/}
+      {/*    ))}*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </div>
   );
 };

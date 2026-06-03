@@ -1,4 +1,8 @@
+//Changes performed by DevWorx on 2/6/2026:
+//Change icon and replaced Grafana with TRCY
+
 import grafanaIconSvg from 'img/grafana_icon.svg';
+import devworxIconTransparent from 'img/devworx_icon_transparent.png';
 
 import { type ConnectionStatus } from '../../hooks/useExternalAmSelector';
 import { GRAFANA_RULES_SOURCE_NAME } from '../../utils/datasource';
@@ -11,7 +15,7 @@ interface Props {
   onEditConfiguration: (dataSourceName: string) => void;
 }
 
-const BUILTIN_ALERTMANAGER_NAME = 'Grafana built-in';
+const BUILTIN_ALERTMANAGER_NAME = 'Alert Manager';
 
 export default function InternalAlertmanager({ onEditConfiguration }: Props) {
   const { configuration, enableAlertmanager, disableAlertmanager, forwardingDisabled } = useSettings();
@@ -26,7 +30,7 @@ export default function InternalAlertmanager({ onEditConfiguration }: Props) {
   return (
     <AlertmanagerCard
       name={BUILTIN_ALERTMANAGER_NAME}
-      logo={grafanaIconSvg}
+      logo={devworxIconTransparent}
       status={status}
       receiving={isReceiving}
       onEditConfiguration={handleEditConfiguration}

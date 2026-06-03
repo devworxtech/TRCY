@@ -1,3 +1,6 @@
+//Changes performed by DevWorx on 2/6/2026:
+//Change icon with TRCY's
+
 import { type DataSourceInstanceSettings, type DataSourceJsonData, type DataSourceSettings } from '@grafana/data';
 import { config, getDataSourceSrv } from '@grafana/runtime';
 import {
@@ -15,6 +18,7 @@ import {
   type RulesSourceUid,
 } from 'app/types/unified-alerting';
 import grafanaIconSvg from 'img/grafana_icon.svg';
+import devworxIconTransparent from 'img/devworx_icon_transparent.png';
 
 import { alertmanagerApi } from '../api/alertmanagerApi';
 import { hasAnyPermission } from '../hooks/abilities/abilityUtils';
@@ -119,7 +123,7 @@ export function isAlertmanagerDataSourceInterestedInAlerts(
 
 const grafanaAlertManagerDataSource: AlertManagerDataSource = {
   name: GRAFANA_RULES_SOURCE_NAME,
-  imgUrl: grafanaIconSvg,
+  imgUrl: devworxIconTransparent,
   hasConfigurationAPI: true,
 };
 

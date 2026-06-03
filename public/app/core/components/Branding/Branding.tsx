@@ -1,3 +1,6 @@
+//Changes performed by DevWorx on 2/6/2026:
+//Changed login welcome message and icon
+
 import { css, cx } from '@emotion/css';
 import { type FC, type JSX } from 'react';
 
@@ -8,6 +11,7 @@ import { Tooltip, useStyles2, useTheme2 } from '@grafana/ui';
 import g8LoginDarkSvg from 'img/g8_login_dark.svg';
 import g8LoginLightSvg from 'img/g8_login_light.svg';
 import grafanaIconSvg from 'img/grafana_icon.svg';
+import devworxIconTransparent from 'img/devworx_icon_transparent.png';
 
 export interface BrandComponentProps {
   className?: string;
@@ -15,7 +19,7 @@ export interface BrandComponentProps {
 }
 
 export const LoginLogo: FC<BrandComponentProps & { logo?: string }> = ({ className, logo }) => {
-  return <img className={className} src={`${logo ? logo : grafanaIconSvg}`} alt="Grafana" />;
+  return <img className={className} src={`${logo ? logo : devworxIconTransparent}`} alt="TRCY" />;
 };
 
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
@@ -51,7 +55,7 @@ const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
 };
 
 const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src={grafanaIconSvg} alt="Grafana" />;
+  return <img className={className} src={devworxIconTransparent} alt="TRCY" />;
 };
 
 /**
@@ -117,8 +121,8 @@ export class Branding {
   static LoginBackground = LoginBackground;
   static MenuLogo = MenuLogo;
   static LoginBoxBackground = LoginBoxBackground;
-  static AppTitle = 'Grafana';
-  static LoginTitle = 'Welcome to Grafana';
+  static AppTitle = 'TRCY';
+  static LoginTitle = 'Welcome to TRCY';
   static HideEdition = false;
   static GetLoginSubTitle = (): null | string => {
     return null;

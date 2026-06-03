@@ -1,3 +1,8 @@
+//Changes performed by DevWorx on 3/6/2026:
+//Commented out grafana-pyroscope-app
+
+
+
 import { type ReactElement, useCallback, useMemo } from 'react';
 
 import {
@@ -19,7 +24,7 @@ type Props = {
 };
 
 const QUERYLESS_APPS = [
-  'grafana-pyroscope-app',
+  // 'grafana-pyroscope-app',
   'grafana-lokiexplore-app',
   'grafana-exploretraces-app',
   'grafana-metricsdrilldown-app',

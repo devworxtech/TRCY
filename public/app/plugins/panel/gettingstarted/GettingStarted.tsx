@@ -1,4 +1,9 @@
 // Libraries
+
+//Changes performed by DevWorx on 3/6/2026:
+//Changed what render() returns and
+
+
 import { css, cx } from '@emotion/css';
 import { PureComponent } from 'react';
 
@@ -24,7 +29,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
   state = {
     checksDone: false,
     currentStep: 0,
-    steps: getSteps(),
+    steps: getSteps()
   };
 
   async componentDidMount() {
@@ -87,49 +92,62 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
     const step = steps[currentStep];
 
     return (
-      <div className={styles.container}>
-        {!checksDone ? (
-          <div className={styles.loading}>
-            <div className={styles.loadingText}>
-              <Trans i18nKey="gettingstarted.getting-started.checking-completed-setup-steps">
-                Checking completed setup steps
-              </Trans>
-            </div>
-            <Spinner size="xl" inline />
+      <>
+        <div className={styles.container}>
+          <div className={styles.content}>
+          <h4>
+            <b>TRCY</b> gives your team a unified view of logs, traces, and metrics — so you always know what is happening across your stack,
+            <br />
+            why it is happening, and where to act first. No unnecessary complexity, no vendor lock-in, and no cost structures that don't match your actual needs
+          </h4>
           </div>
-        ) : (
-          <>
-            <Button size="sm" fill="text" className={styles.dismiss} onClick={this.dismiss}>
-              <Trans i18nKey="gettingstarted.getting-started.remove-this-panel">Remove this panel</Trans>
-            </Button>
-            {currentStep === steps.length - 1 && (
-              <Button
-                className={cx(styles.backForwardButtons, styles.previous)}
-                onClick={this.onPreviousClick}
-                aria-label={t('gettingstarted.getting-started.aria-label-to-basic-tutorials', 'To basic tutorials')}
-                icon="angle-left"
-                variant="secondary"
-              />
-            )}
-            <div className={styles.content}>
-              <Step step={step} />
-            </div>
-            {currentStep < steps.length - 1 && (
-              <Button
-                className={cx(styles.backForwardButtons, styles.forward)}
-                onClick={this.onForwardClick}
-                aria-label={t(
-                  'gettingstarted.getting-started.aria-label-to-advanced-tutorials',
-                  'To advanced tutorials'
-                )}
-                icon="angle-right"
-                variant="secondary"
-              />
-            )}
-          </>
-        )}
-      </div>
+        </div>
+      </>
     );
+    // return (
+    //   <div className={styles.container}>
+    //     {!checksDone ? (
+    //       <div className={styles.loading}>
+    //         <div className={styles.loadingText}>
+    //           <Trans i18nKey="gettingstarted.getting-started.checking-completed-setup-steps">
+    //             Checking completed setup steps
+    //           </Trans>
+    //         </div>
+    //         <Spinner size="xl" inline />
+    //       </div>
+    //     ) : (
+    //       <>
+    //         <Button size="sm" fill="text" className={styles.dismiss} onClick={this.dismiss}>
+    //           <Trans i18nKey="gettingstarted.getting-started.remove-this-panel">Remove this panel</Trans>
+    //         </Button>
+    //         {currentStep === steps.length - 1 && (
+    //           <Button
+    //             className={cx(styles.backForwardButtons, styles.previous)}
+    //             onClick={this.onPreviousClick}
+    //             aria-label={t('gettingstarted.getting-started.aria-label-to-basic-tutorials', 'To basic tutorials')}
+    //             icon="angle-left"
+    //             variant="secondary"
+    //           />
+    //         )}
+    //         <div className={styles.content}>
+    //           <Step step={step} />
+    //         </div>
+    //         {currentStep < steps.length - 1 && (
+    //           <Button
+    //             className={cx(styles.backForwardButtons, styles.forward)}
+    //             onClick={this.onForwardClick}
+    //             aria-label={t(
+    //               'gettingstarted.getting-started.aria-label-to-advanced-tutorials',
+    //               'To advanced tutorials'
+    //             )}
+    //             icon="angle-right"
+    //             variant="secondary"
+    //           />
+    //         )}
+    //       </>
+    //     )}
+    //    </div>
+    // );
   }
 }
 

@@ -16837,9 +16837,10 @@
     }
   },
   "welcome": {
+    "_comment": "Changes performed by DevWorx on 3/6/2026: Renamed Grafana to TRCY",
     "welcome-banner": {
       "need-help": "Need help?",
-      "welcome-to-grafana": "Welcome to Grafana"
+      "welcome-to-grafana": "Welcome to TRCY"
     }
   },
   "xychart": {

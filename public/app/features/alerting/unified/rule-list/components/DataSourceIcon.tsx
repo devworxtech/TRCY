@@ -1,8 +1,14 @@
+//Changes performed by DevWorx on 3/6/2026:
+//Changed Grafana's icon with TRCY's
+
 import { Icon } from '@grafana/ui';
 import lokiIconSvg from 'app/plugins/datasource/loki/img/loki_icon.svg';
 import mimirLogoSvg from 'app/plugins/datasource/prometheus/img/mimir_logo.svg';
 import prometheusLogoSvg from 'app/plugins/datasource/prometheus/img/prometheus_logo.svg';
+import devworxLogoPng from 'app/plugins/datasource/grafana/img/devworx_icon_transparent.png';
+
 import { PromApplication, type RulesSourceApplication } from 'app/types/unified-alerting-dto';
+
 
 interface DataSourceIconProps {
   application?: RulesSourceApplication;
@@ -19,6 +25,6 @@ export const DataSourceIcon = ({ application, size = 16 }: DataSourceIconProps) 
       return <img width={size} height={size} src={lokiIconSvg} alt="Loki" />;
     case 'grafana':
     default:
-      return <Icon name="grafana" />;
+      return <img width={size} height={size} src={devworxLogoPng} alt="TRCY" />;
   }
 };

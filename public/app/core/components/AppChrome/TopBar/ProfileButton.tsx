@@ -1,3 +1,6 @@
+//Changes performed by DevWorx on 2/6/2026:
+//Removed Enable kiosk mode, Latest from the blog
+
 import { css } from '@emotion/css';
 import { cloneDeep } from 'lodash';
 import { useToggle } from 'react-use';
@@ -35,18 +38,18 @@ export function ProfileButton({ profileNode, onToggleKioskMode }: Props) {
         {config.featureToggles.grafanaconThemes && (
           <MenuItem icon="palette" onClick={onToggleThemeDrawer} label={t('profile.change-theme', 'Change theme')} />
         )}
-        <Menu.Item
-          icon="monitor"
-          onClick={onToggleKioskMode}
-          label={t('profile.enable-kiosk-mode', 'Enable kiosk mode')}
-        />
-        {config.newsFeedEnabled && (
-          <MenuItem
-            icon="rss"
-            onClick={onToggleShowNewsDrawer}
-            label={t('navigation.rss-button', 'Latest from the blog')}
-          />
-        )}
+        {/*<Menu.Item*/}
+        {/*  icon="monitor"*/}
+        {/*  onClick={onToggleKioskMode}*/}
+        {/*  label={t('profile.enable-kiosk-mode', 'Enable kiosk mode')}*/}
+        {/*/>*/}
+        {/*{config.newsFeedEnabled && (*/}
+        {/*  <MenuItem*/}
+        {/*    icon="rss"*/}
+        {/*    onClick={onToggleShowNewsDrawer}*/}
+        {/*    label={t('navigation.rss-button', 'Latest from the blog')}*/}
+        {/*  />*/}
+        {/*)}*/}
         <Menu.Divider />
         {!config.auth.disableSignoutMenu && (
           <MenuItem

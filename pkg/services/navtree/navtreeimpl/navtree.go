@@ -1,3 +1,6 @@
+// Changes performed by DevWorx on 2/6/2026:
+// Changed Grafana with TRCY in "Drill down into your data..."
+
 package navtreeimpl
 
 import (
@@ -141,7 +144,7 @@ func (s *ServiceImpl) GetNavTree(c *contextmodel.ReqContext, prefs *pref.Prefere
 		treeRoot.AddSection(&navtree.NavLink{
 			Text:       "Drilldown",
 			Id:         navtree.NavIDDrilldown,
-			SubTitle:   "Drill down into your data using Grafana's powerful queryless apps",
+			SubTitle:   "Drill down into your data using Trcy's powerful queryless apps",
 			Icon:       "drilldown",
 			SortWeight: navtree.WeightDrilldown,
 			Url:        s.cfg.AppSubURL + "/drilldown",

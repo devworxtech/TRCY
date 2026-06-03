@@ -1,3 +1,6 @@
+//Changes performed by DevWorx on 3/6/2026:
+//Set steps done attribute to true and changed heading in the first step
+
 import { store } from '@grafana/data';
 import { getBackendSrv } from 'app/core/services/backend_srv';
 import { getDatasourceSrv } from 'app/features/plugins/datasource_srv';
@@ -13,11 +16,11 @@ const step2Key = `${keyPrefix}${step2TutorialTitle.replace(' ', '-').trim().toLo
 
 export const getSteps = (): SetupStep[] => [
   {
-    heading: 'Welcome to Grafana',
+    heading: 'Welcome to TRCY',
     subheading: 'The steps below will guide you to quickly finish setting up your Grafana installation.',
     title: 'Basic',
     info: 'The steps below will guide you to quickly finish setting up your Grafana installation.',
-    done: false,
+    done: true,
     cards: [
       {
         type: 'tutorial',
@@ -28,7 +31,7 @@ export const getSteps = (): SetupStep[] => [
         icon: 'grafana',
         check: () => Promise.resolve(store.get(step1Key)),
         key: step1Key,
-        done: false,
+        done: true,
       },
       {
         type: 'docs',
@@ -48,7 +51,7 @@ export const getSteps = (): SetupStep[] => [
             );
           });
         },
-        done: false,
+        done: true,
       },
       {
         type: 'docs',
@@ -61,7 +64,7 @@ export const getSteps = (): SetupStep[] => [
           const result = await getGrafanaSearcher().search({ limit: 1, kind: ['dashboard'] });
           return result.totalRows > 0;
         },
-        done: false,
+        done: true,
       },
     ],
   },
@@ -71,7 +74,7 @@ export const getSteps = (): SetupStep[] => [
       'All necessary steps to use Grafana are done. Now tackle advanced steps or make the best use of this home dashboard – it is, after all, a fully customizable dashboard – and remove this panel.',
     title: 'Advanced',
     info: ' Manage your users and teams and add plugins. These steps are optional',
-    done: false,
+    done: true,
     cards: [
       {
         type: 'tutorial',
@@ -82,7 +85,7 @@ export const getSteps = (): SetupStep[] => [
         icon: 'users-alt',
         key: step2Key,
         check: () => Promise.resolve(store.get(step2Key)),
-        done: false,
+        done: true,
       },
       {
         type: 'docs',
@@ -95,7 +98,7 @@ export const getSteps = (): SetupStep[] => [
           const plugins = await getBackendSrv().get('/api/plugins', { embedded: 0, core: 0 });
           return Promise.resolve(plugins.length > 0);
         },
-        done: false,
+        done: true,
       },
     ],
   },

@@ -1,3 +1,7 @@
+//Changes performed by DevWorx on 3/6/2026:
+//Commented out HoverWidget
+
+
 import { css, cx } from '@emotion/css';
 import { type CSSProperties, type ReactElement, type ReactNode, useId, useState } from 'react';
 import * as React from 'react';
@@ -384,17 +388,17 @@ export function PanelChrome({
 
         {hoverHeader && (
           <>
-            {hasHeaderContent && (
-              <HoverWidget
-                menu={menu}
-                title={typeof title === 'string' ? title : undefined}
-                dragClass={dragClass}
-                onDragStart={onDragStart}
-                offset={hoverHeaderOffset}
-                onOpenMenu={onOpenMenu}
-              >
-                {headerContent}
-              </HoverWidget>
+            {hasHeaderContent && (<></>
+              // <HoverWidget
+              //   menu={menu}
+              //   title={typeof title === 'string' ? title : undefined}
+              //   dragClass={dragClass}
+              //   onDragStart={onDragStart}
+              //   offset={hoverHeaderOffset}
+              //   onOpenMenu={onOpenMenu}
+              // >
+              //   {headerContent}
+              // </HoverWidget>
             )}
 
             {statusMessage && (

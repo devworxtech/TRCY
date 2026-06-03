@@ -111,8 +111,8 @@ const linkMap = new Map<string, IconName>([
   ['/explore/metrics', 'drilldown'],
   ['/a/grafana-metricsdrilldown-app', 'drilldown'],
   ['/a/grafana-lokiexplore-app', 'drilldown'],
-  ['/a/grafana-exploretraces-app', 'drilldown'],
-  ['/a/grafana-pyroscope-app', 'drilldown'],
+  ['/a/grafana-exploretraces-app', 'drilldown']
+  // ['/a/grafana-pyroscope-app', 'drilldown'],
 ]);
 
 const getStyles = (theme: GrafanaTheme2) => {

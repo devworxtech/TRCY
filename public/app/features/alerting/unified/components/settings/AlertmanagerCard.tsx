@@ -1,3 +1,7 @@
+//Changes performed by DevWorx on 3/6/2026:
+//Renamed Grafana to TRCY for managed alerts
+
+
 import { capitalize } from 'lodash';
 
 import { Trans, t } from '@grafana/i18n';
@@ -78,7 +82,7 @@ export function AlertmanagerCard({
               {!receiving ? (
                 <Text variant="bodySmall">
                   <Trans i18nKey="alerting.alertmanager-card.not-receiving-grafana-managed-alerts">
-                    Not receiving Grafana managed alerts
+                    Not receiving TRCY managed alerts
                   </Trans>
                 </Text>
               ) : (
@@ -93,7 +97,7 @@ export function AlertmanagerCard({
                     <Badge
                       text={t(
                         'alerting.alertmanager-card.text-receiving-grafanamanaged-alerts',
-                        'Receiving Grafana-managed alerts'
+                        'Receiving TRCY-managed alerts'
                       )}
                       color="green"
                     />
