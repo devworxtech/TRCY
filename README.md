@@ -1,5 +1,5 @@
 ## TRCY
-### This repository contains a modified version of Grafana, adapted for use within the MyCompany SaaS platform.
+### This repository contains a modified version of Grafana, adapted for use within the DevWorx SaaS platform.
 
 ### Legal & Licensing Notice * Original Software: Grafana (https://github.com/grafana/grafana) * Original Author: Grafana Labs (https://grafana.com) * License: GNU Affero General Public License v3.0 (AGPLv3)
 ### Modifications Made: Pursuant to Section 5(a) of the AGPLv3, notice is hereby given that this software has been modified by DevWorx:
