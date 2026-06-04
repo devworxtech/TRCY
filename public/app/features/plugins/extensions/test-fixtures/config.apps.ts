@@ -1,3 +1,6 @@
+//Changes performed by DevWorx on 3/6/2026:
+//Commented out grafana-pyroscope-app
+
 import { type AngularMeta, type AppPluginConfig, PluginLoadingStrategy } from '@grafana/data';
 import { type AppPluginMetas } from '@grafana/runtime/internal';
 
@@ -240,62 +243,62 @@ export const metas: AppPluginMetas = structuredClone({
     },
     buildMode: 'production',
   },
-  'grafana-pyroscope-app': {
-    id: 'grafana-pyroscope-app',
-    path: 'public/plugins/grafana-pyroscope-app/module.js',
-    version: '1.14.2',
-    preload: true,
-    // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-    angular: { detected: false } as AngularMeta,
-    loadingStrategy: PluginLoadingStrategy.script,
-    extensions: {
-      addedLinks: [
-        {
-          targets: [
-            'grafana/explore/toolbar/action',
-            'grafana/traceview/details',
-            'grafana-assistant-app/navigateToDrilldown/v1',
-          ],
-          title: 'Open in Grafana Profiles Drilldown',
-          description: 'Try our new queryless experience for profiles',
-        },
-      ],
-      addedComponents: [],
-      exposedComponents: [
-        {
-          id: 'grafana-pyroscope-app/embedded-profiles-exploration/v1',
-          title: 'Embedded Profiles Exploration',
-          description:
-            'A component that renders a profiles exploration view that can be embedded in other parts of Grafana.',
-        },
-      ],
-      extensionPoints: [
-        {
-          id: 'grafana-pyroscope-app/investigation/v1',
-          title: '',
-          description: '',
-        },
-        {
-          id: 'grafana-pyroscope-app/settings/v1',
-          title: '',
-          description: '',
-        },
-      ],
-      addedFunctions: [],
-    },
-    dependencies: {
-      grafanaDependency: '>=11.5.0',
-      grafanaVersion: '*',
-      plugins: [],
-      extensions: {
-        exposedComponents: [
-          'grafana-o11yinsights-app/insights-launcher/v1',
-          'grafana-adaptiveprofiles-app/resolution-boost/v1',
-        ],
-      },
-    },
-    buildMode: 'production',
-  },
+  // 'grafana-pyroscope-app': {
+  //   id: 'grafana-pyroscope-app',
+  //   path: 'public/plugins/grafana-pyroscope-app/module.js',
+  //   version: '1.14.2',
+  //   preload: true,
+  //   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+  //   angular: { detected: false } as AngularMeta,
+  //   loadingStrategy: PluginLoadingStrategy.script,
+  //   extensions: {
+  //     addedLinks: [
+  //       {
+  //         targets: [
+  //           'grafana/explore/toolbar/action',
+  //           'grafana/traceview/details',
+  //           'grafana-assistant-app/navigateToDrilldown/v1',
+  //         ],
+  //         title: 'Open in Grafana Profiles Drilldown',
+  //         description: 'Try our new queryless experience for profiles',
+  //       },
+  //     ],
+  //     addedComponents: [],
+  //     exposedComponents: [
+  //       {
+  //         id: 'grafana-pyroscope-app/embedded-profiles-exploration/v1',
+  //         title: 'Embedded Profiles Exploration',
+  //         description:
+  //           'A component that renders a profiles exploration view that can be embedded in other parts of Grafana.',
+  //       },
+  //     ],
+  //     extensionPoints: [
+  //       {
+  //         id: 'grafana-pyroscope-app/investigation/v1',
+  //         title: '',
+  //         description: '',
+  //       },
+  //       {
+  //         id: 'grafana-pyroscope-app/settings/v1',
+  //         title: '',
+  //         description: '',
+  //       },
+  //     ],
+  //     addedFunctions: [],
+  //   },
+  //   dependencies: {
+  //     grafanaDependency: '>=11.5.0',
+  //     grafanaVersion: '*',
+  //     plugins: [],
+  //     extensions: {
+  //       exposedComponents: [
+  //         'grafana-o11yinsights-app/insights-launcher/v1',
+  //         'grafana-adaptiveprofiles-app/resolution-boost/v1',
+  //       ],
+  //     },
+  //   },
+  //   buildMode: 'production',
+  // },
   'grafana-assistant-app': {
     id: 'grafana-assistant-app',
     path: 'https://plugins-cdn.grafana-ops.net/grafana-assistant-app/1.1.24+58ee124e03cacc64622bfd434222be36787410d8/public/plugins/grafana-assistant-app/module.js',

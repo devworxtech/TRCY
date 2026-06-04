@@ -1,4 +1,5 @@
 {
+  "_comment": "Changes performed by DevWorx on 3/6/2026: Renamed Grafana to TRCY",
   "title": "Grafana1",
   "tags": [],
     "timezone": "browser",
@@ -23,7 +24,7 @@
       ]
     },
     {
-      "title": "Welcome to Grafana",
+      "title": "Welcome to TRCY",
       "height": "210px",
       "collapse": false,
       "editable": true,

@@ -1,4 +1,5 @@
 {
+  "_comment": "Changes performed by DevWorx on 3/6/2026: Removed \"grafana.app/saved-from-ui\": \"Grafana v13.1.0-local (6df7a29a18)\",",
   "apiVersion": "dashboard.grafana.app/v2",
   "kind": "Dashboard",
   "metadata": {
@@ -14,7 +15,6 @@
     "annotations": {
       "grafana.app/createdBy": "user:aerwo725ot62od",
       "grafana.app/folder": "cff3pcl0xqby8d",
-      "grafana.app/saved-from-ui": "Grafana v13.1.0-local (6df7a29a18)",
       "grafana.app/updatedBy": "user:aerwo725ot62od",
       "grafana.app/updatedTimestamp": "2026-04-23T13:49:40Z",
       "grafana.app/folderTitle": "Debugging Triage",
