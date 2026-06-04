@@ -1,3 +1,6 @@
+//Changes performed by DevWorx on 4/6/2026:
+//Commented out and changed the text in subTitle
+
 import { css } from '@emotion/css';
 
 import { type GrafanaTheme2, type ThemeRegistryItem } from '@grafana/data';
@@ -28,14 +31,14 @@ export function ThemeSelectorDrawer({ onClose }: Props) {
 
   const subTitle = (
     <Trans i18nKey="shared-preferences.fields.theme-description">
-      Enjoying the experimental themes? Tell us what you'd like to see{' '}
-      <TextLink
-        variant="bodySmall"
-        external
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeRKAY8nUMEVIKSYJ99uOO-dimF6Y69_If1Q1jTLOZRWqK1cw/viewform?usp=dialog"
-      >
-        here.
-      </TextLink>
+      You can choose one of the following themes
+      {/*<TextLink*/}
+      {/*  variant="bodySmall"*/}
+      {/*  external*/}
+      {/*  href="https://docs.google.com/forms/d/e/1FAIpQLSeRKAY8nUMEVIKSYJ99uOO-dimF6Y69_If1Q1jTLOZRWqK1cw/viewform?usp=dialog"*/}
+      {/*>*/}
+      {/*  here.*/}
+      {/*</TextLink>*/}
     </Trans>
   );
 

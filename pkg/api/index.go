@@ -169,7 +169,7 @@ func (hs *HTTPServer) setIndexViewData(c *contextmodel.ReqContext) (*dtos.IndexV
 		AppTitle:                            "Grafana",
 		NavTree:                             navTree,
 		Nonce:                               c.RequestNonce,
-		LoadingLogo:                         template.URL(assets.ContentDeliveryURL + "public/build/img/grafana_icon.svg"), // #nosec G203
+		LoadingLogo:                         template.URL("/public/img/devworx_icon_transparent.png"), // #nosec G203
 		IsDevelopmentEnv:                    hs.Cfg.Env == setting.Dev,
 		Assets:                              assets,
 		RenderBindingSupported:              renderBindingSupported,

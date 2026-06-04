@@ -54,17 +54,18 @@ function SidebarComp({ children, contextValue }: Props) {
 
   if (contextValue.isHidden) {
     return (
-      <SidebarContext.Provider value={contextValue}>
-        <IconButton
-          className={cx(styles.showButton, position === 'left' ? styles.showButtonLeft : styles.showButtonRight)}
-          variant="secondary"
-          name={'arrow-to-right'}
-          tooltip={t('grafana-ui.sidebar.show', 'Show')}
-          tooltipPlacement={position === 'left' ? 'right' : 'left'}
-          onClick={onToggleIsHidden}
-          data-testid={selectors.components.Sidebar.showHideToggle}
-        />
-      </SidebarContext.Provider>
+      <></>
+      // <SidebarContext.Provider value={contextValue}>
+      //   <IconButton
+      //     className={cx(styles.showButton, position === 'left' ? styles.showButtonLeft : styles.showButtonRight)}
+      //     variant="secondary"
+      //     name={'arrow-to-right'}
+      //     tooltip={t('grafana-ui.sidebar.show', 'Show')}
+      //     tooltipPlacement={position === 'left' ? 'right' : 'left'}
+      //     onClick={onToggleIsHidden}
+      //     data-testid={selectors.components.Sidebar.showHideToggle}
+      //   />
+      // </SidebarContext.Provider>
     );
   }
 

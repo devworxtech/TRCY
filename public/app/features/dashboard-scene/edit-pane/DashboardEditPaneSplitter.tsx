@@ -1,3 +1,7 @@
+//Changes performed by DevWorx on 4/6/2026:
+//Commented out sidebar
+
+
 import { css, cx } from '@emotion/css';
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { useMedia } from 'react-use';
@@ -206,9 +210,9 @@ function DashboardEditPaneSplitterNewLayouts({ dashboard, isEditing, body, contr
           {body}
         </div>
 
-        <Sidebar contextValue={sidebarContext}>
-          <DashboardEditPaneRenderer editPane={editPane} dashboard={dashboard} />
-        </Sidebar>
+        {/*<Sidebar contextValue={sidebarContext}>*/}
+        {/*  <DashboardEditPaneRenderer editPane={editPane} dashboard={dashboard} />*/}
+        {/*</Sidebar>*/}
       </div>
     );
   }

@@ -1,3 +1,6 @@
+//Changes performed by DevWorx on 4/6/2026:
+//Added grafana-lokiexplore-app.interceptBannerStorageKey to localstorage with value true
+
 import 'symbol-observable';
 import 'regenerator-runtime/runtime';
 
@@ -141,6 +144,7 @@ export class GrafanaApp {
 
   async init() {
     try {
+      localStorage.setItem('grafana-lokiexplore-app.interceptBannerStorageKey', 'true');
       await preInitTasks();
 
       // Let iframe container know grafana has started loading

@@ -278,16 +278,16 @@ func (s *ServiceImpl) addPluginToSection(c *contextmodel.ReqContext, treeRoot *n
 		navNode.Children = append(navNode.Children, sectionChildren...)
 	} else {
 		switch sectionID {
-		case navtree.NavIDApps:
-			treeRoot.AddSection(&navtree.NavLink{
-				Text:       "More apps",
-				Icon:       "layer-group",
-				SubTitle:   "App plugins that extend the Grafana experience",
-				Id:         navtree.NavIDApps,
-				Children:   sectionChildren,
-				SortWeight: navtree.WeightApps,
-				Url:        s.cfg.AppSubURL + "/apps",
-			})
+// 		case navtree.NavIDApps:
+// 			treeRoot.AddSection(&navtree.NavLink{
+// 				Text:       "More apps",
+// 				Icon:       "layer-group",
+// 				SubTitle:   "App plugins that extend the Grafana experience",
+// 				Id:         navtree.NavIDApps,
+// 				Children:   sectionChildren,
+// 				SortWeight: navtree.WeightApps,
+// 				Url:        s.cfg.AppSubURL + "/apps",
+// 			})
 		case navtree.NavIDObservability:
 			treeRoot.AddSection(&navtree.NavLink{
 				Text:       "Observability",
