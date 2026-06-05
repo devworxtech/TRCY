@@ -2,6 +2,9 @@
 // Use of this source code is governed by a MIT-style
 // license that can be found in the LICENSE file.
 
+//Changes performed by DevWorx on 5/6/2026:
+//Changed the "From" name to TRCY
+
 package notifications
 
 import (
@@ -110,7 +113,7 @@ func (ns *NotificationService) buildEmailMessage(cmd *SendEmailCommand) (*Messag
 		}
 	}
 
-	addr := mail.Address{Name: ns.Cfg.Smtp.FromName, Address: ns.Cfg.Smtp.FromAddress}
+	addr := mail.Address{Name: "TRCY", Address: ns.Cfg.Smtp.FromAddress}
 	return &Message{
 		To:               cmd.To,
 		SingleEmail:      cmd.SingleEmail,

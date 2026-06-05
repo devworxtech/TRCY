@@ -1,3 +1,6 @@
+<!-- Changes performed by DevWorx on 5/6/2026: -->
+<!-- Changed the logo from Grafana to TRCY -->
+
 <mj-column background-color="transparent">
-  <mj-image padding="0" width="200px" src="https://grafana.com/static/assets/img/logo_new_transparent_light_400x100.png" align="left" />
+  <mj-image padding="0" width="200px" src="https://observability-questionnaire.s3.eu-south-1.amazonaws.com/Devworx.png" align="left" />
 </mj-column>

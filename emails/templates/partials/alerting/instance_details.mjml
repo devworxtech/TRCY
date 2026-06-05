@@ -1,3 +1,6 @@
+<!-- Changes performed by DevWorx on 5/6/2026: -->
+<!-- Removed silence button -->
+
 <!-- Image from external service -->
 <mj-raw>{{ if .ImageURL }}</mj-raw>
 <mj-section padding="0">
@@ -109,9 +112,6 @@
 <mj-section text-align="left" css-class="border-top" padding="15px 0px">
   <mj-raw>{{ if .SilenceURL }}</mj-raw>
   <mj-column>
-    <mj-button align="center" vertical-align="middle" href="{{ .SilenceURL }}" padding="0" inner-padding="5px 12px">
-      Silence
-    </mj-button>
   </mj-column>
   <mj-raw>{{ end }}</mj-raw>
   <mj-raw>{{ if .Annotations.runbook_url }}</mj-raw>

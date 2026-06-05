@@ -210,9 +210,9 @@ function DashboardEditPaneSplitterNewLayouts({ dashboard, isEditing, body, contr
           {body}
         </div>
 
-        {/*<Sidebar contextValue={sidebarContext}>*/}
-        {/*  <DashboardEditPaneRenderer editPane={editPane} dashboard={dashboard} />*/}
-        {/*</Sidebar>*/}
+        <Sidebar contextValue={sidebarContext}>
+          <DashboardEditPaneRenderer editPane={editPane} dashboard={dashboard} />
+        </Sidebar>
       </div>
     );
   }

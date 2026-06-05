@@ -67,106 +67,106 @@ export function DashboardEditPaneRenderer({ editPane, dashboard }: Props) {
 
   return (
     <>
-      {/*{openPane && (*/}
-      {/*  <Sidebar.OpenPane>*/}
-      {/*    <openPane.Component key={openPane.state.key} model={openPane} />*/}
-      {/*  </Sidebar.OpenPane>*/}
-      {/*)}*/}
-      {/*<Sidebar.Toolbar>*/}
-      {/*  {isEditing && (*/}
-      {/*    <div className={styles.editGroup}>*/}
-      {/*      <Sidebar.Button*/}
-      {/*        icon="plus"*/}
-      {/*        variant="primary"*/}
-      {/*        onClick={() => editPane.openPane(new AddNewEditPane({}))}*/}
-      {/*        title={t('dashboard.sidebar.add.title', 'Add')}*/}
-      {/*        tooltip={t('dashboard.sidebar.add.tooltip', 'Add new element')}*/}
-      {/*        data-testid={selectors.pages.Dashboard.Sidebar.addButton}*/}
-      {/*        active={openPane instanceof AddNewEditPane}*/}
-      {/*      />*/}
+      {openPane && (
+        <Sidebar.OpenPane>
+          <openPane.Component key={openPane.state.key} model={openPane} />
+        </Sidebar.OpenPane>
+      )}
+      <Sidebar.Toolbar>
+        {isEditing && (
+          <div className={styles.editGroup}>
+            <Sidebar.Button
+              icon="plus"
+              variant="primary"
+              onClick={() => editPane.openPane(new AddNewEditPane({}))}
+              title={t('dashboard.sidebar.add.title', 'Add')}
+              tooltip={t('dashboard.sidebar.add.tooltip', 'Add new element')}
+              data-testid={selectors.pages.Dashboard.Sidebar.addButton}
+              active={openPane instanceof AddNewEditPane}
+            />
 
-      {/*      <Sidebar.Button*/}
-      {/*        icon="cog"*/}
-      {/*        onClick={() => editPane.selectObject(dashboard)}*/}
-      {/*        title={t('dashboard.sidebar.dashboard-options.title', 'Options')}*/}
-      {/*        tooltip={t('dashboard.sidebar.dashboard-options.tooltip', 'Dashboard options')}*/}
-      {/*        data-testid={selectors.pages.Dashboard.Sidebar.optionsButton}*/}
-      {/*        active={selectedObject === dashboard && openPane?.getId() === 'element' ? true : false}*/}
-      {/*      />*/}
-      {/*      {config.featureToggles.feedbackButton && (*/}
-      {/*        <Sidebar.Button*/}
-      {/*          style={{ color: '#ff671d' }}*/}
-      {/*          icon="comment-alt-message"*/}
-      {/*          onClick={() =>*/}
-      {/*            window.open(*/}
-      {/*              'https://docs.google.com/forms/d/e/1FAIpQLSfDZJM_VlZgRHDx8UPtLWbd9bIBPRxoA28qynTHEYniyPXO6Q/viewform',*/}
-      {/*              '_blank'*/}
-      {/*            )*/}
-      {/*          }*/}
-      {/*          title={t(*/}
-      {/*            'dashboard-scene.dashboard-edit-pane-renderer.title-feedback-dashboard-editing-experience',*/}
-      {/*            'Give feedback on the new dashboard editing experience'*/}
-      {/*          )}*/}
-      {/*          tooltip={t(*/}
-      {/*            'dashboard-scene.dashboard-edit-pane-renderer.title-feedback-dashboard-editing-experience',*/}
-      {/*            'Give feedback on the new dashboard editing experience'*/}
-      {/*          )}*/}
-      {/*        />*/}
-      {/*      )}*/}
-      {/*      <Sidebar.Button*/}
-      {/*        tooltip={t('dashboard.sidebar.edit-schema.tooltip', 'Edit as code')}*/}
-      {/*        title={t('dashboard.sidebar.edit-schema.title', 'Code')}*/}
-      {/*        icon="brackets-curly"*/}
-      {/*        onClick={() => editPane.openPane(new DashboardCodePane({}))}*/}
-      {/*        active={openPane instanceof DashboardCodePane}*/}
-      {/*      />*/}
-      {/*      {config.featureToggles.dashboardUndoRedo && (*/}
-      {/*        <>*/}
-      {/*          <Sidebar.Divider />*/}
-      {/*          <UndoButton dashboard={dashboard} />*/}
-      {/*          <RedoButton dashboard={dashboard} />*/}
-      {/*        </>*/}
-      {/*      )}*/}
-      {/*    </div>*/}
-      {/*  )}*/}
-      {/*  <div className={styles.viewGroup}>*/}
-      {/*    {hasUid && !isEmbedded && <ShareExportDashboardButton dashboard={dashboard} />}*/}
-      {/*    <Sidebar.Button*/}
-      {/*      icon="list-ui-alt"*/}
-      {/*      onClick={() => {*/}
-      {/*        DashboardInteractions.dashboardOutlineClicked();*/}
-      {/*        editPane.openPane(outlinePane!);*/}
-      {/*      }}*/}
-      {/*      title={t('dashboard.sidebar.outline.title', 'Outline')}*/}
-      {/*      tooltip={t('dashboard.sidebar.outline.tooltip', 'Content outline')}*/}
-      {/*      data-testid={selectors.pages.Dashboard.Sidebar.outlineButton}*/}
-      {/*      active={openPane instanceof DashboardOutline}*/}
-      {/*    />*/}
-      {/*    {config.featureToggles.dashboardNewLayouts &&*/}
-      {/*      (config.featureToggles.dashboardFiltersOverview ||*/}
-      {/*        config.featureToggles.dashboardUnifiedDrilldownControls) && (*/}
-      {/*        <FiltersOverviewButton editPane={editPane} openPane={openPane} />*/}
-      {/*      )}*/}
-      {/*    {dashboard.isManaged() && Boolean(meta.canEdit) && <ManagedDashboardNavBarBadge dashboard={dashboard} />}*/}
-      {/*    {renderEnterpriseItems()}*/}
-      {/*    {Boolean(meta.isSnapshot) && (*/}
-      {/*      <Sidebar.Button*/}
-      {/*        data-testid="button-snapshot"*/}
-      {/*        tooltip={t('dashboard.sidebar.snapshot.tooltip', 'Open original dashboard')}*/}
-      {/*        title={t('dashboard.toolbar.snapshot.title', 'Source')}*/}
-      {/*        icon="link"*/}
-      {/*        onClick={() => onOpenSnapshotOriginalDashboard(dashboard.getSnapshotUrl())}*/}
-      {/*      />*/}
-      {/*    )}*/}
-      {/*    <Sidebar.Divider />*/}
-      {/*    <Sidebar.Button*/}
-      {/*      icon={'arrow-to-right'}*/}
-      {/*      onClick={onClickHideSidebar}*/}
-      {/*      title={t('grafana-ui.sidebar.hide', 'Hide')}*/}
-      {/*      data-testid={selectors.components.Sidebar.showHideToggle}*/}
-      {/*    />*/}
-      {/*  </div>*/}
-      {/*</Sidebar.Toolbar>*/}
+            <Sidebar.Button
+              icon="cog"
+              onClick={() => editPane.selectObject(dashboard)}
+              title={t('dashboard.sidebar.dashboard-options.title', 'Options')}
+              tooltip={t('dashboard.sidebar.dashboard-options.tooltip', 'Dashboard options')}
+              data-testid={selectors.pages.Dashboard.Sidebar.optionsButton}
+              active={selectedObject === dashboard && openPane?.getId() === 'element' ? true : false}
+            />
+            {config.featureToggles.feedbackButton && (
+              <Sidebar.Button
+                style={{ color: '#ff671d' }}
+                icon="comment-alt-message"
+                onClick={() =>
+                  window.open(
+                    'https://docs.google.com/forms/d/e/1FAIpQLSfDZJM_VlZgRHDx8UPtLWbd9bIBPRxoA28qynTHEYniyPXO6Q/viewform',
+                    '_blank'
+                  )
+                }
+                title={t(
+                  'dashboard-scene.dashboard-edit-pane-renderer.title-feedback-dashboard-editing-experience',
+                  'Give feedback on the new dashboard editing experience'
+                )}
+                tooltip={t(
+                  'dashboard-scene.dashboard-edit-pane-renderer.title-feedback-dashboard-editing-experience',
+                  'Give feedback on the new dashboard editing experience'
+                )}
+              />
+            )}
+            <Sidebar.Button
+              tooltip={t('dashboard.sidebar.edit-schema.tooltip', 'Edit as code')}
+              title={t('dashboard.sidebar.edit-schema.title', 'Code')}
+              icon="brackets-curly"
+              onClick={() => editPane.openPane(new DashboardCodePane({}))}
+              active={openPane instanceof DashboardCodePane}
+            />
+            {config.featureToggles.dashboardUndoRedo && (
+              <>
+                <Sidebar.Divider />
+                <UndoButton dashboard={dashboard} />
+                <RedoButton dashboard={dashboard} />
+              </>
+            )}
+          </div>
+        )}
+        <div className={styles.viewGroup}>
+          {hasUid && !isEmbedded && <ShareExportDashboardButton dashboard={dashboard} />}
+          <Sidebar.Button
+            icon="list-ui-alt"
+            onClick={() => {
+              DashboardInteractions.dashboardOutlineClicked();
+              editPane.openPane(outlinePane!);
+            }}
+            title={t('dashboard.sidebar.outline.title', 'Outline')}
+            tooltip={t('dashboard.sidebar.outline.tooltip', 'Content outline')}
+            data-testid={selectors.pages.Dashboard.Sidebar.outlineButton}
+            active={openPane instanceof DashboardOutline}
+          />
+          {config.featureToggles.dashboardNewLayouts &&
+            (config.featureToggles.dashboardFiltersOverview ||
+              config.featureToggles.dashboardUnifiedDrilldownControls) && (
+              <FiltersOverviewButton editPane={editPane} openPane={openPane} />
+            )}
+          {dashboard.isManaged() && Boolean(meta.canEdit) && <ManagedDashboardNavBarBadge dashboard={dashboard} />}
+          {renderEnterpriseItems()}
+          {Boolean(meta.isSnapshot) && (
+            <Sidebar.Button
+              data-testid="button-snapshot"
+              tooltip={t('dashboard.sidebar.snapshot.tooltip', 'Open original dashboard')}
+              title={t('dashboard.toolbar.snapshot.title', 'Source')}
+              icon="link"
+              onClick={() => onOpenSnapshotOriginalDashboard(dashboard.getSnapshotUrl())}
+            />
+          )}
+          <Sidebar.Divider />
+          <Sidebar.Button
+            icon={'arrow-to-right'}
+            onClick={onClickHideSidebar}
+            title={t('grafana-ui.sidebar.hide', 'Hide')}
+            data-testid={selectors.components.Sidebar.showHideToggle}
+          />
+        </div>
+      </Sidebar.Toolbar>
     </>
   );
 }

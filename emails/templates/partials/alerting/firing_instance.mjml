@@ -1,8 +1,8 @@
+<!-- Changes performed by DevWorx on 5/6/2026: -->
+<!-- Removed firing and view alerts buttons -->
+
 <mj-section padding="10px 0" css-class="border-bottom">
   <mj-column vertical-align="middle">
-    <mj-button href="{{ .GeneratorURL }}" border="1px solid #ed8894" background-color="#fae0e3" color="#931625" padding="0" inner-padding="5px 12px">
-      Firing
-    </mj-button>
   </mj-column>
   <mj-column vertical-align="middle">
     <mj-text align="center" padding="0">
@@ -13,9 +13,6 @@
     {{ if gt (len .GeneratorURL) 0 }}
   </mj-raw>
   <mj-column vertical-align="middle">
-    <mj-button href="{{ .GeneratorURL }}" padding="0" inner-padding="5px 12px">
-      View alert
-    </mj-button>
   </mj-column>
   <mj-raw>
     {{ end }}

@@ -1,5 +1,5 @@
 // Changes performed by DevWorx on 2/6/2026:
-// Changed Grafana with TRCY in "Drill down into your data..."
+// Changed Grafana with TRCY in "Drill down into your data..." and allow access to Alerts for admins only
 
 package navtreeimpl
 
@@ -159,9 +159,11 @@ func (s *ServiceImpl) GetNavTree(c *contextmodel.ReqContext, prefs *pref.Prefere
 	uaVisibleForOrg := s.cfg.UnifiedAlerting.IsEnabled() && !uaIsDisabledForOrg
 
 	if uaVisibleForOrg {
-		if alertingSection := s.buildAlertNavLinks(c); alertingSection != nil {
-			treeRoot.AddSection(alertingSection)
-		}
+		if c.SignedInUser != nil && c.SignedInUser.HasRole(org.RoleAdmin) {
+        		if alertingSection := s.buildAlertNavLinks(c); alertingSection != nil {
+        			treeRoot.AddSection(alertingSection)
+        		}
+        	}
 	}
 
 	treeRoot.AddSection(s.buildDataConnectionsNavLink(c))

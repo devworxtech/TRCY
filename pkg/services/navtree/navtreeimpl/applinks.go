@@ -308,7 +308,7 @@ func (s *ServiceImpl) addPluginToSection(c *contextmodel.ReqContext, treeRoot *n
 				Children:   sectionChildren,
 				Url:        s.cfg.AppSubURL + "/infrastructure",
 			})
-		case navtree.NavIDAlertsAndIncidents:
+		case navtree.NavIDAlertsAndIncidents :
 			alertsAndIncidentsChildren := make([]*navtree.NavLink, 0, len(alertingNodes)+1)
 			for _, alertingNode := range alertingNodes {
 				if alertingNode.Id == "alerting" {
